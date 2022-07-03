@@ -1,5 +1,8 @@
 package view;
 
+import view.cliente.GerenciarCliente;
+import view.produto.GerenciarProduto;
+import view.produtoCategoria.GerenciarProdutoCategoria;
 import view.usuario.GerenciarUsuario;
 import view.usuariogrupo.GerenciarUsuarioGrupo;
 
@@ -34,10 +37,11 @@ public class Principal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItemUsuario = new javax.swing.JMenuItem();
         jMenuItemCliente = new javax.swing.JMenuItem();
-        jMenuItemProduto = new javax.swing.JMenuItem();
+        jMenuItemProduto1 = new javax.swing.JMenuItem();
         jMenuItemUsuarioGrupo = new javax.swing.JMenuItem();
+        jMenuItemProduto = new javax.swing.JMenuItem();
+        jMenuItemUsuario = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItemRelatorioUsuario = new javax.swing.JMenuItem();
         jMenuItemRelatorioCliente = new javax.swing.JMenuItem();
@@ -53,16 +57,29 @@ public class Principal extends javax.swing.JFrame {
 
         jMenu1.setText("Cadastro");
 
-        jMenuItemUsuario.setText("Usuário");
-        jMenuItemUsuario.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemCliente.setText("Cliente");
+        jMenuItemCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemUsuarioActionPerformed(evt);
+                jMenuItemClienteActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItemUsuario);
-
-        jMenuItemCliente.setText("Cliente");
         jMenu1.add(jMenuItemCliente);
+
+        jMenuItemProduto1.setText("Categoria de produto");
+        jMenuItemProduto1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemProduto1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItemProduto1);
+
+        jMenuItemUsuarioGrupo.setText("Grupo de usuário");
+        jMenuItemUsuarioGrupo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemUsuarioGrupoActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItemUsuarioGrupo);
 
         jMenuItemProduto.setText("Produto");
         jMenuItemProduto.addActionListener(new java.awt.event.ActionListener() {
@@ -72,13 +89,13 @@ public class Principal extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItemProduto);
 
-        jMenuItemUsuarioGrupo.setText("Grupo de usuário");
-        jMenuItemUsuarioGrupo.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemUsuario.setText("Usuário");
+        jMenuItemUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemUsuarioGrupoActionPerformed(evt);
+                jMenuItemUsuarioActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItemUsuarioGrupo);
+        jMenu1.add(jMenuItemUsuario);
 
         jMenuBar1.add(jMenu1);
 
@@ -132,12 +149,20 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemUsuarioActionPerformed
 
     private void jMenuItemProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemProdutoActionPerformed
-        // TODO add your handling code here:
+        new GerenciarProduto().setVisible(true);
     }//GEN-LAST:event_jMenuItemProdutoActionPerformed
 
     private void jMenuItemUsuarioGrupoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemUsuarioGrupoActionPerformed
        new GerenciarUsuarioGrupo().setVisible(true);
     }//GEN-LAST:event_jMenuItemUsuarioGrupoActionPerformed
+
+    private void jMenuItemProduto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemProduto1ActionPerformed
+        new GerenciarProdutoCategoria().setVisible(true);
+    }//GEN-LAST:event_jMenuItemProduto1ActionPerformed
+
+    private void jMenuItemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemClienteActionPerformed
+        new GerenciarCliente().setVisible(true);
+    }//GEN-LAST:event_jMenuItemClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,6 +208,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItemCliente;
     private javax.swing.JMenuItem jMenuItemProduto;
+    private javax.swing.JMenuItem jMenuItemProduto1;
     private javax.swing.JMenuItem jMenuItemRelatorioCliente;
     private javax.swing.JMenuItem jMenuItemRelatorioProduto;
     private javax.swing.JMenuItem jMenuItemRelatorioUsuario;

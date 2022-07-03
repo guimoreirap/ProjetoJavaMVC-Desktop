@@ -7,6 +7,7 @@ package view.usuario;
 
 
 import controller.UsuarioDao;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import model.Usuario;
 
@@ -163,8 +164,11 @@ public class UsuarioCadastrar extends javax.swing.JFrame {
             return;
         }
         
-        //Validar o email
+        //Recuperar as informações da tela
+        String nome = jTextFieldNome.getText();
+        String email = jTextFieldEmail.getText();
         
+
         //Validar a senha e confirmação de senha
         String senha = new String (jPasswordFieldSenha.getPassword());
         String confirmacao = new String (jPasswordFieldConfirmarSenha.getPassword());
@@ -172,12 +176,6 @@ public class UsuarioCadastrar extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "As senhas nao conferem");
             return;
         }
-        
-        
-        //Recuperar as informações da tela
-        String nome = jTextFieldNome.getText();
-        String email = jTextFieldEmail.getText();
-        //String senha = jPasswordFieldSenha.getText();
         
         //Criar o Usuario
         Usuario u = new Usuario();

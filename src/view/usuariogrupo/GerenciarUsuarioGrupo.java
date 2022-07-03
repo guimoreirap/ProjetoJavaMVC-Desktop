@@ -44,12 +44,18 @@ public class GerenciarUsuarioGrupo extends javax.swing.JFrame {
         jButtonAlterar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Gerenciar grupo de usuário");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Gerenciar Grupo de Usuário");
 
         jLabel2.setText("Pesquisar por nome:");
 
+        jTextFieldPesquisarPorNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldPesquisarPorNomeActionPerformed(evt);
+            }
+        });
         jTextFieldPesquisarPorNome.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTextFieldPesquisarPorNomeKeyReleased(evt);
@@ -325,6 +331,10 @@ public class GerenciarUsuarioGrupo extends javax.swing.JFrame {
     private void jButtonAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAlterarActionPerformed
         this.alterar();
     }//GEN-LAST:event_jButtonAlterarActionPerformed
+
+    private void jTextFieldPesquisarPorNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPesquisarPorNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldPesquisarPorNomeActionPerformed
 
     /**
      * @param args the command line arguments

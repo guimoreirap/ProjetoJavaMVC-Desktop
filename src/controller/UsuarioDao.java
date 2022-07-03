@@ -24,18 +24,6 @@ public class UsuarioDao {
         
         return retorno;
         
-//        try {
-//            ps = conexao.prepareStatement(sql);
-//            ps.setString(1, u.getNome());
-//            ps.setString(2, u.getEmail());
-//            ps.setString(3, u.getSenha());
-//            ps.executeUpdate();
-//            
-//        } catch (Exception e) {
-//            throw e;
-//        } finally {
-//            ps.close();
-//        }
     }
 
 
